@@ -11,7 +11,6 @@ object RequestTest {
         val req = Request.parse("GET /123/someURI/somePart/ protocol")
         assertTrue(req is Request.Delay)
         req as Request.Delay
-        assertEquals("GET", req.verb)
         assertEquals(123L, req.delay)
         assertEquals("someURI/somePart/", req.uri)
     }
@@ -32,10 +31,9 @@ object RequestTest {
     fun `createRequestFromUri should split a valid HTTP line`() {
         val delayInMs = "1234"
         val origUri = "https://somehost:9876/path/to/file.html"
-        val request = Request.createRequestFromUri("GET", "/$delayInMs/$origUri")
+        val request = Request.createRequestFromUri("/$delayInMs/$origUri")
         assertTrue(request is Request.Delay)
         request as Request.Delay
-        assertEquals("GET", request.verb)
         assertEquals(delayInMs.toLong(), request.delay)
         assertEquals(origUri, request.uri)
     }
