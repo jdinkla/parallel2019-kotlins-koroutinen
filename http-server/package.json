@@ -1,0 +1,37 @@
+{
+    "name": "parallel2019-http-server",
+    "version": "0.0.3",
+    "description": "HTTP Server benchmarks",
+    "main": "index.js",
+    "scripts": {
+        "test": "loadtest -n 10 -c 2 http://localhost:9090/100/http://localhost:8080",
+        "test5000": "loadtest -n 5000 -c 1000 http://localhost:9090/100/http://localhost:8080",
+        "test5000b": "loadtest -n 5000 -c 1000 http://localhost:9090/500/http://localhost:8080",
+        "test5000c": "loadtest -n 5000 -c 1000 http://localhost:9090/1000/http://localhost:8080",
+        "test-nginx": "loadtest -n 10 -c 2 http://localhost:8080",
+        "test-nginx-10k": "loadtest -n 10000 -c 1000 http://localhost:8080",
+        "test5k1k": "loadtest -n 5000 -c 1000 http://localhost:9090/100/http://localhost:8080",
+        "test5k1k500": "loadtest -n 5000 -c 1000 http://localhost:9090/500/http://localhost:8080",
+        "test5k1k1000": "loadtest -n 5000 -c 1000 http://localhost:9090/1000/http://localhost:8080",
+        "test10k1k": "loadtest -n 10000 -c 1000 http://localhost:9090/100/http://localhost:8080",
+        "test10k2k": "loadtest -n 10000 -c 2000 http://localhost:9090/100/http://localhost:8080",
+        "test10k10k": "loadtest -n 10000 -c 10000 http://localhost:9090/250/http://localhost:8080",
+        "test20k1k": "loadtest -n 20000 -c 1000 http://localhost:9090/100/http://localhost:8080",
+        "test20k2k": "loadtest -n 20000 -c 2000 http://localhost:9090/100/http://localhost:8080",
+        "test30k1k": "loadtest -n 30000 -c 1000 http://localhost:9090/100/http://localhost:8080",
+        "test40k1k": "loadtest -n 40000 -c 1000 http://localhost:9090/100/http://localhost:8080",
+        "test50k1k": "loadtest -n 50000 -c 10000 http://localhost:9090/250/http://localhost:8080",
+        "test100k1k": "loadtest -n 100000 -c 10000 http://localhost:9090/250/http://localhost:8080",
+        "test20k10k": "loadtest -n 20000 -c 10000 http://localhost:9090/250/http://localhost:8080",
+        "perf10k1k": "loadtest -n 10000 -c 1000 http://localhost:9090/1000/http://localhost:8080",
+        "perf20k1k": "loadtest -n 20000 -c 1000 http://localhost:9090/1000/http://localhost:8080",
+        "perf30k1k": "loadtest -n 30000 -c 1000 http://localhost:9090/1000/http://localhost:8080",
+        "perf40k1k": "loadtest -n 40000 -c 1000 http://localhost:9090/1000/http://localhost:8080",
+        "perf50k1k": "loadtest -n 50000 -c 1000 http://localhost:9090/1000/http://localhost:8080"
+    },
+    "author": "Jörn Dinkla",
+    "license": "MIT",
+    "dependencies": {
+        "loadtest": "^3.0.4"
+    }
+}
