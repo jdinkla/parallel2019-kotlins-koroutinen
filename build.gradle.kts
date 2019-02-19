@@ -2,6 +2,7 @@ import java.net.URI
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 val junitVersion = "5.3.2"
+val ktorVersion = "1.1.2"
 
 plugins {
     kotlin("jvm") version "1.3.21"
@@ -19,6 +20,10 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.1.1")
+
+    compile("io.ktor:ktor-server-core:$ktorVersion")
+    compile("io.ktor:ktor-server-cio:$ktorVersion")
+    compile("io.ktor:ktor-client-cio:$ktorVersion")
 
     compile("ch.qos.logback:logback-classic:1.2.3")
     compile("org.slf4j:slf4j-api:1.7.21")

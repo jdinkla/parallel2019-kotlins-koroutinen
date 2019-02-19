@@ -19,7 +19,8 @@ fun delayAndGet(request: Delay): String {
 }
 
 fun main(args: Array<String>) {
-    val pool = Executors.newWorkStealingPool()
+    //val pool = Executors.newWorkStealingPool()
+    val pool = Executors.newCachedThreadPool()
     ServerSocket(Utils.PORT).use { serverSocket ->
         while (true) {
             val socket = serverSocket.accept()
