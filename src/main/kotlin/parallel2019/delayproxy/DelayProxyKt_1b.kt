@@ -1,4 +1,4 @@
-package parallel2019.slides.dp1b
+package parallel2019.delayproxy_1b
 
 import parallel2019.Request.Error
 import parallel2019.Request.Delay

@@ -1,4 +1,4 @@
-package parallel2019.slides.dp4a
+package parallel2019.delayproxy_4
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.future.await

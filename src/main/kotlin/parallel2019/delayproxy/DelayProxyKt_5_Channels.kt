@@ -1,4 +1,4 @@
-package parallel2019.slides.dp5
+package parallel2019.delayproxy_5
 
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.Channel

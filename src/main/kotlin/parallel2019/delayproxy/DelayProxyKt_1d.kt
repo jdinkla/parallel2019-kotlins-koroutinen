@@ -1,4 +1,4 @@
-package parallel2019.slides.dp1d
+package parallel2019.delayproxy_1d
 
 import parallel2019.Utils
 import parallel2019.Utils.withSocket

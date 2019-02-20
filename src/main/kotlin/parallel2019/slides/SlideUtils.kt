@@ -14,3 +14,7 @@ fun CoroutineScope.show(msg: String) {
     val s = this.coroutineContext.elements().joinToString("\n\t")
     println("$msg: ${Thread.currentThread().name}\n\t$s")
 }
+
+fun CoroutineScope.thread(msg: String) {
+    println("$msg: ${Thread.currentThread().name}")
+}
