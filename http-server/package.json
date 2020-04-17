@@ -1,6 +1,6 @@
 {
     "name": "parallel2019-http-server",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "HTTP Server benchmarks",
     "main": "index.js",
     "scripts": {
@@ -32,6 +32,6 @@
     "author": "Jörn Dinkla",
     "license": "MIT",
     "dependencies": {
-        "loadtest": "^3.0.4"
+        "loadtest": "^5.0.2"
     }
 }
